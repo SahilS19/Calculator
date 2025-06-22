@@ -1,4 +1,5 @@
 # Calculator
+Website link: https://sahils19.github.io/Calculator/
 
 This is a **responsive calculator web app** built using **HTML, CSS, and JavaScript**. It mimics the look and feel of the Windows Calculator, and includes a dynamic **calculation history panel** that can be toggled on/off like the Timer/History icon in the native calculator.
 
