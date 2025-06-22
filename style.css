@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #1e1e1e;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 900px;
+  flex-wrap: nowrap;
+  position: relative;
+}
+
+.calculator {
+  background: #2b2b2b;
+  padding: 20px;
+  border-radius: 12px;
+  width: 320px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  flex-shrink: 0;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-bar h2 {
+  margin: 0;
+}
+
+#toggle-history {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.display {
+  background: #000;
+  color: #fff;
+  font-size: 2.5rem;
+  text-align: right;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 15px 0;
+  min-height: 60px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.btn {
+  background: #3a3a3a;
+  border: none;
+  padding: 20px;
+  font-size: 1.3rem;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #505050;
+}
+
+.operator {
+  background: #f39c12;
+  color: white;
+}
+
+.operator:hover {
+  background: #e67e22;
+}
+
+.equal {
+  grid-column: span 2;
+  background: #27ae60;
+}
+
+.equal:hover {
+  background: #2ecc71;
+}
+
+/* History panel */
+.history-panel {
+  background: #2b2b2b;
+  border-radius: 12px;
+  padding: 20px;
+  width: 300px;
+  max-height: 500px;
+  overflow-y: auto;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  display: none;
+}
+
+.history-panel.show {
+  display: block;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+#clear-history {
+  background: #c0392b;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+#history-list {
+  list-style: none;
+  padding: 0;
+}
+
+#history-list li {
+  background: #1f1f1f;
+  padding: 10px;
+  margin-bottom: 8px;
+  border-left: 4px solid #3498db;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .calculator, .history-panel {
+    width: 90%;
+  }
+
+  .history-panel {
+    order: 2;
+  }
+}
